@@ -1,20 +1,24 @@
 Confirm the following are included in your repo, checking each box:
 
- - [ ] completed README.md file with the necessary information
- - [ ] shim.efi to be signed
- - [ ] public portion of your certificate(s) embedded in shim (the file passed to VENDOR_CERT_FILE)
- - [ ] binaries, for which hashes are added to vendor_db ( if you use vendor_db and have hashes allow-listed )
- - [ ] any extra patches to shim via your own git tree or as files
- - [ ] any extra patches to grub via your own git tree or as files
- - [ ] build logs
- - [ ] a Dockerfile to reproduce the build of the provided shim EFI binaries
+ - [X] completed README.md file with the necessary information
+ - [X] shim.efi to be signed
+ - [X] public portion of your certificate(s) embedded in shim (the file passed to VENDOR_CERT_FILE)
+ - [X] binaries, for which hashes are added to vendor_db ( if you use vendor_db and have hashes allow-listed )
+Not used.
+ - [X] any extra patches to shim via your own git tree or as files
+None.
+ - [X] any extra patches to grub via your own git tree or as files
+None.
+ - [X] build logs
+ - [X] a Dockerfile to reproduce the build of the provided shim EFI binaries
 
 -------------------------------------------------------------------------------
 ### What is the link to your tag in a repo cloned from rhboot/shim-review?
 -------------------------------------------------------------------------------
-`https://github.com/user/shim-review/tree/myorg-shim-arch-YYYYMMDD`
+
+`https://github.com/puzzleos/shim-review/tree/puzzleos-shim-x86_64-20220706`
 
 -------------------------------------------------------------------------------
 ### What is the SHA256 hash of your final SHIM binary?
 -------------------------------------------------------------------------------
-[your text here]
+938ecd12359171bcb63e5974ed2dfff719cc8af1abe27cd12849c04060aeb721
