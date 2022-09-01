@@ -1,40 +1,34 @@
-Sending build context to Docker daemon  156.2kB
+Sending build context to Docker daemon  3.381MB
 Step 1/10 : From ubuntu:jammy
-jammy: Pulling from library/ubuntu
-405f018f9d1d: Pulling fs layer
-405f018f9d1d: Verifying Checksum
-405f018f9d1d: Download complete
-405f018f9d1d: Pull complete
-Digest: sha256:b6b83d3c331794420340093eb706a6f152d9c1fa51b262d9bf34594887c2c7ac
-Status: Downloaded newer image for ubuntu:jammy
- ---> 27941809078c
+ ---> df5de72bdb3b
 Step 2/10 : RUN apt update -y && 	DEBIAN_FRONTEND=noninteractive apt install -y wget gcc make bzip2 efitools
- ---> Running in 4b38c15b3a14
+ ---> Running in d21643370fb2
 [91m
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 [0mGet:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
-Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
 Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
-Get:7 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [4648 B]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [226 kB]
-Get:9 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [276 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [428 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [7827 B]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [174 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [5798 B]
-Get:16 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [96.7 kB]
-Get:17 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [245 kB]
-Fetched 21.8 MB in 2s (9212 kB/s)
+Get:5 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [364 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [148 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [4644 B]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [344 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [7791 B]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [283 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [390 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [679 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [7275 B]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [3175 B]
+Fetched 22.5 MB in 5s (4535 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
-9 packages can be upgraded. Run 'apt list --upgradable' to see them.
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
 [91m
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
@@ -67,8 +61,8 @@ The following NEW packages will be installed:
   libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6
   libxcb1 libxdmcp6 libxpm4 linux-libc-dev make manpages manpages-dev openssl
   publicsuffix rpcsvc-proto sbsigntool ucf wget
-0 upgraded, 66 newly installed, 0 to remove and 9 not upgraded.
-Need to get 59.0 MB of archives.
+0 upgraded, 66 newly installed, 0 to remove and 3 not upgraded.
+Need to get 59.1 MB of archives.
 After this operation, 184 MB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.6 [1184 kB]
 Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 ca-certificates all 20211016 [148 kB]
@@ -116,8 +110,8 @@ Get:43 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgcc-11-dev amd64 11.
 Get:44 http://archive.ubuntu.com/ubuntu jammy/main amd64 gcc-11 amd64 11.2.0-19ubuntu1 [20.1 MB]
 Get:45 http://archive.ubuntu.com/ubuntu jammy/main amd64 gcc amd64 4:11.2.0-1ubuntu1 [5112 B]
 Get:46 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
-Get:47 http://archive.ubuntu.com/ubuntu jammy/main amd64 libc-dev-bin amd64 2.35-0ubuntu3 [20.3 kB]
-Get:48 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfreetype6 amd64 2.11.1+dfsg-1build1 [389 kB]
+Get:47 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-dev-bin amd64 2.35-0ubuntu3.1 [20.4 kB]
+Get:48 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libfreetype6 amd64 2.11.1+dfsg-1ubuntu0.1 [389 kB]
 Get:49 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfontconfig1 amd64 2.13.1-4.2ubuntu5 [131 kB]
 Get:50 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg-turbo8 amd64 2.1.2-0ubuntu1 [134 kB]
 Get:51 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg8 amd64 8c-2ubuntu10 [2264 B]
@@ -127,17 +121,17 @@ Get:54 http://archive.ubuntu.com/ubuntu jammy/main amd64 libwebp7 amd64 1.2.2-2 
 Get:55 http://archive.ubuntu.com/ubuntu jammy/main amd64 libtiff5 amd64 4.3.0-6 [183 kB]
 Get:56 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxpm4 amd64 1:3.5.12-1build2 [36.2 kB]
 Get:57 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgd3 amd64 2.3.0-2ubuntu2 [129 kB]
-Get:58 http://archive.ubuntu.com/ubuntu jammy/main amd64 libc-devtools amd64 2.35-0ubuntu3 [28.9 kB]
-Get:59 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-40.43 [1286 kB]
+Get:58 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-devtools amd64 2.35-0ubuntu3.1 [28.9 kB]
+Get:59 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-47.51 [1325 kB]
 Get:60 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcrypt-dev amd64 1:4.4.27-1 [112 kB]
 Get:61 http://archive.ubuntu.com/ubuntu jammy/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu6 [68.5 kB]
-Get:62 http://archive.ubuntu.com/ubuntu jammy/main amd64 libtirpc-dev amd64 1.3.2-2build1 [192 kB]
+Get:62 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtirpc-dev amd64 1.3.2-2ubuntu0.1 [192 kB]
 Get:63 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnsl-dev amd64 1.3.0-2build2 [71.3 kB]
-Get:64 http://archive.ubuntu.com/ubuntu jammy/main amd64 libc6-dev amd64 2.35-0ubuntu3 [2099 kB]
+Get:64 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.1 [2099 kB]
 Get:65 http://archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
 Get:66 http://archive.ubuntu.com/ubuntu jammy/main amd64 manpages-dev all 5.10-1ubuntu1 [2309 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 59.0 MB in 7s (8119 kB/s)
+[0mFetched 59.1 MB in 46s (1298 kB/s)
 Selecting previously unselected package openssl.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4395 files and directories currently installed.)
 Preparing to unpack .../00-openssl_3.0.2-0ubuntu1.6_amd64.deb ...
@@ -279,11 +273,11 @@ Selecting previously unselected package libbrotli1:amd64.
 Preparing to unpack .../45-libbrotli1_1.0.9-2build6_amd64.deb ...
 Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
 Selecting previously unselected package libc-dev-bin.
-Preparing to unpack .../46-libc-dev-bin_2.35-0ubuntu3_amd64.deb ...
-Unpacking libc-dev-bin (2.35-0ubuntu3) ...
+Preparing to unpack .../46-libc-dev-bin_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc-dev-bin (2.35-0ubuntu3.1) ...
 Selecting previously unselected package libfreetype6:amd64.
-Preparing to unpack .../47-libfreetype6_2.11.1+dfsg-1build1_amd64.deb ...
-Unpacking libfreetype6:amd64 (2.11.1+dfsg-1build1) ...
+Preparing to unpack .../47-libfreetype6_2.11.1+dfsg-1ubuntu0.1_amd64.deb ...
+Unpacking libfreetype6:amd64 (2.11.1+dfsg-1ubuntu0.1) ...
 Selecting previously unselected package libfontconfig1:amd64.
 Preparing to unpack .../48-libfontconfig1_2.13.1-4.2ubuntu5_amd64.deb ...
 Unpacking libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
@@ -312,11 +306,11 @@ Selecting previously unselected package libgd3:amd64.
 Preparing to unpack .../56-libgd3_2.3.0-2ubuntu2_amd64.deb ...
 Unpacking libgd3:amd64 (2.3.0-2ubuntu2) ...
 Selecting previously unselected package libc-devtools.
-Preparing to unpack .../57-libc-devtools_2.35-0ubuntu3_amd64.deb ...
-Unpacking libc-devtools (2.35-0ubuntu3) ...
+Preparing to unpack .../57-libc-devtools_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc-devtools (2.35-0ubuntu3.1) ...
 Selecting previously unselected package linux-libc-dev:amd64.
-Preparing to unpack .../58-linux-libc-dev_5.15.0-40.43_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (5.15.0-40.43) ...
+Preparing to unpack .../58-linux-libc-dev_5.15.0-47.51_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.15.0-47.51) ...
 Selecting previously unselected package libcrypt-dev:amd64.
 Preparing to unpack .../59-libcrypt-dev_1%3a4.4.27-1_amd64.deb ...
 Unpacking libcrypt-dev:amd64 (1:4.4.27-1) ...
@@ -324,14 +318,14 @@ Selecting previously unselected package rpcsvc-proto.
 Preparing to unpack .../60-rpcsvc-proto_1.4.2-0ubuntu6_amd64.deb ...
 Unpacking rpcsvc-proto (1.4.2-0ubuntu6) ...
 Selecting previously unselected package libtirpc-dev:amd64.
-Preparing to unpack .../61-libtirpc-dev_1.3.2-2build1_amd64.deb ...
-Unpacking libtirpc-dev:amd64 (1.3.2-2build1) ...
+Preparing to unpack .../61-libtirpc-dev_1.3.2-2ubuntu0.1_amd64.deb ...
+Unpacking libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
 Selecting previously unselected package libnsl-dev:amd64.
 Preparing to unpack .../62-libnsl-dev_1.3.0-2build2_amd64.deb ...
 Unpacking libnsl-dev:amd64 (1.3.0-2build2) ...
 Selecting previously unselected package libc6-dev:amd64.
-Preparing to unpack .../63-libc6-dev_2.35-0ubuntu3_amd64.deb ...
-Unpacking libc6-dev:amd64 (2.35-0ubuntu3) ...
+Preparing to unpack .../63-libc6-dev_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.35-0ubuntu3.1) ...
 Selecting previously unselected package make.
 Preparing to unpack .../64-make_4.3-4.1build1_amd64.deb ...
 Unpacking make (4.3-4.1build1) ...
@@ -347,13 +341,13 @@ Setting up manpages (5.10-1ubuntu1) ...
 Setting up libbrotli1:amd64 (1.0.9-2build6) ...
 Setting up binutils-common:amd64 (2.38-3ubuntu1) ...
 Setting up libdeflate0:amd64 (1.10-2) ...
-Setting up linux-libc-dev:amd64 (5.15.0-40.43) ...
+Setting up linux-libc-dev:amd64 (5.15.0-47.51) ...
 Setting up libctf-nobfd0:amd64 (2.38-3ubuntu1) ...
 Setting up libgomp1:amd64 (12-20220319-1ubuntu1) ...
 Setting up bzip2 (1.0.8-5build1) ...
 Setting up libjbig0:amd64 (2.1-3.1build3) ...
 Setting up libasan6:amd64 (11.2.0-19ubuntu1) ...
-Setting up libtirpc-dev:amd64 (1.3.2-2build1) ...
+Setting up libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
 Setting up rpcsvc-proto (1.4.2-0ubuntu6) ...
 Setting up libx11-data (2:1.7.5-1) ...
 Setting up make (4.3-4.1build1) ...
@@ -373,7 +367,7 @@ Setting up libcrypt-dev:amd64 (1:4.4.27-1) ...
 Setting up sbsigntool (0.9.4-2ubuntu2) ...
 Setting up libbinutils:amd64 (2.38-3ubuntu1) ...
 Setting up libisl23:amd64 (0.24-2build1) ...
-Setting up libc-dev-bin (2.35-0ubuntu3) ...
+Setting up libc-dev-bin (2.35-0ubuntu3.1) ...
 Setting up openssl (3.0.2-0ubuntu1.6) ...
 Setting up libbsd0:amd64 (0.11.5-1) ...
 Setting up publicsuffix (20211207.1025-1) ...
@@ -392,10 +386,10 @@ Setting up fontconfig-config (2.13.1-4.2ubuntu5) ...
 Setting up ca-certificates (20211016) ...
 Updating certificates in /etc/ssl/certs...
 127 added, 0 removed; done.
-Setting up libfreetype6:amd64 (2.11.1+dfsg-1build1) ...
+Setting up libfreetype6:amd64 (2.11.1+dfsg-1ubuntu0.1) ...
 Setting up libgcc-11-dev:amd64 (11.2.0-19ubuntu1) ...
 Setting up cpp (4:11.2.0-1ubuntu1) ...
-Setting up libc6-dev:amd64 (2.35-0ubuntu3) ...
+Setting up libc6-dev:amd64 (2.35-0ubuntu3.1) ...
 Setting up libx11-6:amd64 (2:1.7.5-1) ...
 Setting up libtiff5:amd64 (4.3.0-6) ...
 Setting up libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
@@ -404,84 +398,83 @@ Setting up libxpm4:amd64 (1:3.5.12-1build2) ...
 Setting up binutils (2.38-3ubuntu1) ...
 Setting up libgd3:amd64 (2.3.0-2ubuntu2) ...
 Setting up gcc-11 (11.2.0-19ubuntu1) ...
-Setting up libc-devtools (2.35-0ubuntu3) ...
+Setting up libc-devtools (2.35-0ubuntu3.1) ...
 Setting up gcc (4:11.2.0-1ubuntu1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
 Processing triggers for ca-certificates (20211016) ...
 Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-Removing intermediate container 4b38c15b3a14
- ---> af1813ad0798
+Removing intermediate container d21643370fb2
+ ---> 0fdd0a49b513
 Step 3/10 : RUN wget https://github.com/rhboot/shim/releases/download/15.6/shim-15.6.tar.bz2 || exit 1
- ---> Running in 69c683176b8d
-[91m--2022-07-06 17:30:53--  https://github.com/rhboot/shim/releases/download/15.6/shim-15.6.tar.bz2
-[0m[91mResolving github.com (github.com)... [0m[91m140.82.113.4
-Connecting to github.com (github.com)|140.82.113.4|:443... [0m[91mconnected.
-[0m[91mHTTP request sent, awaiting response... [0m[91m302 Found
-Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/3996476/2df141a4-ba87-4485-8b0b-1421c8700232?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220706T173054Z&X-Amz-Expires=300&X-Amz-Signature=97d881d1bff1dbdb4991280ecdf08b369cee937107942a70b67f2375511e927b&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=3996476&response-content-disposition=attachment%3B%20filename%3Dshim-15.6.tar.bz2&response-content-type=application%2Foctet-stream [following]
---2022-07-06 17:30:53--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/3996476/2df141a4-ba87-4485-8b0b-1421c8700232?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220706%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220706T173054Z&X-Amz-Expires=300&X-Amz-Signature=97d881d1bff1dbdb4991280ecdf08b369cee937107942a70b67f2375511e927b&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=3996476&response-content-disposition=attachment%3B%20filename%3Dshim-15.6.tar.bz2&response-content-type=application%2Foctet-stream
-Resolving objects.githubusercontent.com (objects.githubusercontent.com)... [0m[91m185.199.110.133, 185.199.111.133, 185.199.108.133, ...
-Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.110.133|:443... [0m[91mconnected.
-[0m[91mHTTP request sent, awaiting response... [0m[91m200 OK
+ ---> Running in 8e8a50c286cf
+[91m--2022-09-01 19:25:43--  https://github.com/rhboot/shim/releases/download/15.6/shim-15.6.tar.bz2
+[0m[91mResolving proxy.esl.cisco.com (proxy.esl.cisco.com)... [0m[91m173.36.224.108
+Connecting to proxy.esl.cisco.com (proxy.esl.cisco.com)|173.36.224.108|:8080... [0m[91mconnected.
+[0m[91mProxy request sent, awaiting response... [0m[91m302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/3996476/2df141a4-ba87-4485-8b0b-1421c8700232?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220901T192111Z&X-Amz-Expires=300&X-Amz-Signature=721fd2007f92e890d437e5dcc690d043fc68a4624dafbfc892a0b03a14987ff9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=3996476&response-content-disposition=attachment%3B%20filename%3Dshim-15.6.tar.bz2&response-content-type=application%2Foctet-stream [following]
+--2022-09-01 19:25:43--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/3996476/2df141a4-ba87-4485-8b0b-1421c8700232?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220901T192111Z&X-Amz-Expires=300&X-Amz-Signature=721fd2007f92e890d437e5dcc690d043fc68a4624dafbfc892a0b03a14987ff9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=3996476&response-content-disposition=attachment%3B%20filename%3Dshim-15.6.tar.bz2&response-content-type=application%2Foctet-stream
+Connecting to proxy.esl.cisco.com (proxy.esl.cisco.com)|173.36.224.108|:8080... [0m[91mconnected.
+[0m[91mProxy request sent, awaiting response... [0m[91m200 OK
 [0m[91mLength: 1343748 (1.3M) [application/octet-stream]
 [0m[91mSaving to: 'shim-15.6.tar.bz2'
 [0m[91m
-     0K ....[0m[91m.[0m[91m.....[0m[91m ....[0m[91m.[0m[91m.....[0m[91m ...[0m[91m..[0m[91m...[0m[91m.. .[0m[91m.[0m[91m...[0m[91m.[0m[91m.[0m[91m...[0m[91m ......[0m[91m.[0m[91m...  3% 1.61M 1s
-    50K .......... ...[0m[91m....... .........[0m[91m. .......... .....[0m[91m.....  7% 2.92M 1s
-   100K .......... .[0m[91m......... .......[0m[91m... .......... ...[0m[91m....... 11% 5.11M 0s
-   150K .[0m[91m........[0m[91m. .......... .....[0m[91m..... .......... .[0m[91m......... 15% 8.79M 0s
-   200K .......[0m[91m... .......... ...[0m[91m....... .........[0m[91m. .......... 19% 6.06M 0s
-   250K ....[0m[91m...... ..[0m[91m........[0m[91m .......... .......... ....[0m[91m...... 22% 4.41M 0s
-   300K ..[0m[91m........[0m[91m .......... [0m[91m......[0m[91m.... .......... [0m[91m..[0m[91m........ 26% 17.2M 0s
-   350K ........[0m[91m.. .......... ....[0m[91m...... ..........[0m[91m .......... 30% 15.8M 0s
-   400K ......[0m[91m.... .......... ..[0m[91m........ ........[0m[91m.. ......[0m[91m.... 34% 14.4M 0s
-   450K .......... ....[0m[91m......[0m[91m .......... ......[0m[91m.... .......... 38% 14.7M 0s
-   500K ..[0m[91m........ ........[0m[91m.. ......[0m[91m.... .......... ..[0m[91m........ 41% 46.7M 0s[0m[91m
-   550K .......... ...[0m[91m...[0m[91m.... ........[0m[91m.. ..[0m[91m........ ........[0m[91m.. 45% 3.47M 0s
-   600K ......[0m[91m.... ....[0m[91m...... ..........[0m[91m ........[0m[91m.. .......... 49%[0m[91m 33.5M 0s
-   650K .......... ..........[0m[91m ........[0m[91m.. .......... .......... 53% 25.8M 0s
-   700K ..........[0m[91m ........[0m[91m.. ......[0m[91m.... ....[0m[91m...... ..[0m[91m........ 57% 31.1M 0s[0m[91m
-   750K ........[0m[91m.. .......... ....[0m[91m...... ..[0m[91m........ ........[0m[91m.. 60% 74.3M 0s[0m[91m
-   800K ......[0m[91m.... ....[0m[91m...... ..[0m[91m........ ........[0m[91m.. .......... 64% 31.8M 0s
-   850K ....[0m[91m...... ..........[0m[91m .......... ...[0m[91m...[0m[91m.... .......... 68% 25.3M 0s
-   900K ..[0m[91m........[0m[91m ........[0m[91m.. ......[0m[91m.... ....[0m[91m...... .......... 72% 98.9M 0s[0m[91m
-   950K ........[0m[91m.. ......[0m[91m.... .......... .......... ........[0m[91m.. 76% 12.9M 0s
-  1000K .......... ..[0m[91m..[0m[91m...... ..........[0m[91m ........[0m[91m.. .......... 80% 88.9M 0s
-  1050K .......... .......... ........[0m[91m.. .......... ....[0m[91m...... 83% 56.2M 0s
-  1100K ..[0m[91m........ ...[0m[91m....... ......[0m[91m.... .......... ..[0m[91m........ 87% 60.4M 0s
-  1150K .......... ......[0m[91m.... ....[0m[91m...... ..........[0m[91m ........[0m[91m.. 91% 26.4M 0s
-  1200K ......[0m[91m.... ........[0m[91m.. ..[0m[91m........ ........[0m[91m.. .......... 95% 7.81M 0s
-  1250K .......... .......... .......... .......... .......... 99%  172M 0s
-  1300K ..[0m[91m........ ..                                         100% 44.9M=0.1s
+     0K .[0m[91m.[0m[91m...[0m[91m.[0m[91m..[0m[91m..[0m[91m .[0m[91m.[0m[91m...[0m[91m.[0m[91m...[0m[91m.[0m[91m ..[0m[91m....[0m[91m.[0m[91m.[0m[91m..[0m[91m .[0m[91m...[0m[91m.[0m[91m.[0m[91m..[0m[91m.[0m[91m.[0m[91m ..[0m[91m.[0m[91m.[0m[91m..[0m[91m.[0m[91m.[0m[91m..  3% 30.3M 0s[0m[91m
+    50K .[0m[91m...[0m[91m.[0m[91m.[0m[91m.... ...[0m[91m....... .[0m[91m........[0m[91m. ........[0m[91m.. .....[0m[91m.....  7% 57.2M 0s[0m[91m
+   100K ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... ......[0m[91m.... ...[0m[91m....... 11% 65.2M 0s
+   150K .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. 15% 97.7M 0s
+   200K .....[0m[91m..[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... 19%  107M 0s
+   250K .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... 22%  107M[0m[91m 0s
+   300K[0m[91m ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... ...[0m[91m....... 26%  126M 0s
+   350K .[0m[91m........[0m[91m. .....[0m[91m..[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. 30%  101M 0s
+   400K .......[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... 34%  107M 0s
+   450K .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... 38%  119M 0s
+   500K ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... ...[0m[91m....... 41%  115M 0s
+   550K .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... ......[0m[91m.... .[0m[91m........[0m[91m. 45% 99.3M 0s
+   600K .[0m[91m......[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... 49%  106M 0s
+   650K ....[0m[91m.[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... 53%  118M 0s
+   700K[0m[91m ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... ...[0m[91m....... 57%  105M 0s
+   750K .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. 60% 91.6M 0s
+   800K .......[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... 64%  118M 0s
+   850K .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... 68%  108M 0s
+   900K ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... ...[0m[91m....... 72%  114M 0s
+   950K [0m[91m.[0m[91m........[0m[91m. .......[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m......... 76% 90.4M 0s
+  1000K[0m[91m .......[0m[91m... .....[0m[91m..... ...[0m[91m....... .[0m[91m........[0m[91m. .......[0m[91m... 80%  190M 0s
+  1050K .....[0m[91m..... ...[0m[91m....... .[0m[91m.........[0m[91m ........[0m[91m.. ......[0m[91m.... 83%  177M 0s
+  1100K ....[0m[91m...... ..[0m[91m.......[0m[91m. .......... ..[0m[91m...[0m[91m..... .......... 87%  123M[0m[91m 0s
+  1150K .[0m[91m........[0m[91m.[0m[91m ........[0m[91m.. ......[0m[91m.... ...[0m[91m....... .........[0m[91m. 91%  101M 0s
+  1200K .......[0m[91m... .....[0m[91m....[0m[91m. .......... .....[0m[91m..... ...[0m[91m....... 95%  182M 0s
+  1250K .[0m[91m.....[0m[91m.... .......... ..[0m[91m........[0m[91m ........[0m[91m.. .......... 99%[0m[91m 99.9M 0s
+  1300K ....[0m[91m...... ..   [0m[91m       [0m[91m             [0m[91m      [0m[91m       [0m[91m     100%[0m[91m  172M=0.01s
 
-[0m[91m2022-07-06 17:30:54 (9.61 MB/s) - 'shim-15.6.tar.bz2' saved [1343748/1343748]
+[0m[91m2022-09-01 19:25:43 (96.9 MB/s) - 'shim-15.6.tar.bz2' saved [1343748/1343748]
 
-[0mRemoving intermediate container 69c683176b8d
- ---> de6f5164ac3e
+[0mRemoving intermediate container 8e8a50c286cf
+ ---> 8b0c1fb9766f
 Step 4/10 : RUN tar -xjf shim-15.6.tar.bz2 -C /
- ---> Running in 54c1b2d020fd
-Removing intermediate container 54c1b2d020fd
- ---> 906930b443cd
+ ---> Running in f24c9b53ffef
+Removing intermediate container f24c9b53ffef
+ ---> dab17df51a62
 Step 5/10 : COPY config/* /shim-15.6/
- ---> 9715bdd9a00a
+ ---> e3b5360559f7
 Step 6/10 : COPY config/certs /shim-15.6/certs
- ---> 9ee2c2892d85
+ ---> 58ba06e6d950
 Step 7/10 : RUN cd shim-15.6/certs; 	for i in *.pem; do 		sha1sum $i; 		openssl x509 -text -noout -in $i; 		cert=`echo $i | sed 's/\..*//'`; 		cert-to-efi-sig-list -g $cert.guid $i $cert.esl; 	done; 	cat *.esl > /shim-15.6/vendor_db.esl; 	ls -l *.esl /shim-15.6/vendor_db.esl
- ---> Running in 2f0b8d7c5364
-d29d88afb2c24afef59316da7daac95e1d53bbb4  atomix-shim_limited-REL-1-ca.pem
+ ---> Running in 6f0482c5e914
+4d0ec216b6442be8481ca7d79592de34ee2176a3  atomix-shim_limited-REL-1.pem
 Certificate:
     Data:
         Version: 3 (0x2)
         Serial Number:
-            c8:aa:9a:c4:0a:53:38:21
+            68:51:46:ad:24:3e:b4:2b:71:af:0b:ac:07:1e:00:4b:13:e5:6a:15
         Signature Algorithm: sha256WithRSAEncryption
-        Issuer: O = Cisco, OU = ACI, OU = REL, CN = Puzzle UEFI shim Limited
+        Issuer: O = Cisco, OU = PuzzleOS, OU = REL, CN = PuzzleOS UEFI shim Limited
         Validity
-            Not Before: Jun  3 21:02:10 2021 GMT
-            Not After : May 22 21:02:10 2071 GMT
-        Subject: O = Cisco, OU = ACI, OU = REL, CN = Puzzle UEFI shim Limited
+            Not Before: Sep  1 16:55:37 2022 GMT
+            Not After : Aug 26 16:55:37 2047 GMT
+        Subject: O = Cisco, OU = PuzzleOS, OU = REL, CN = PuzzleOS UEFI shim Limited
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 Public-Key: (2048 bit)
@@ -510,37 +503,41 @@ Certificate:
                 38:CB:B8:BD:05:25:C6:F1:7C:30:28:FF:10:63:E7:EE:0B:E8:DD:A6
             X509v3 Authority Key Identifier: 
                 38:CB:B8:BD:05:25:C6:F1:7C:30:28:FF:10:63:E7:EE:0B:E8:DD:A6
+            X509v3 Extended Key Usage: 
+                Code Signing
+            X509v3 Key Usage: 
+                Digital Signature
             X509v3 Basic Constraints: 
-                CA:TRUE
+                CA:FALSE
     Signature Algorithm: sha256WithRSAEncryption
     Signature Value:
-        85:ae:c4:b0:64:5e:af:ea:04:78:c0:e4:96:d5:f1:ca:2f:c5:
-        ef:42:24:ce:11:63:ef:59:8e:d8:f8:39:9a:f5:7f:d6:a7:fe:
-        23:86:50:fc:cc:f3:9f:da:6f:8b:72:bf:22:0a:ea:1d:48:86:
-        c8:4b:99:9a:08:34:a2:2e:c4:67:86:3d:2b:ef:e1:8b:5f:c0:
-        62:47:fd:ae:2b:18:67:c5:a4:ef:cc:2e:7d:cb:a5:f0:71:f2:
-        53:71:fd:d6:60:84:17:2c:d3:b1:b7:bc:d9:08:70:1d:c2:69:
-        52:39:4e:16:8a:52:b9:55:04:15:55:2e:85:83:93:48:d8:d4:
-        31:8d:d8:e6:80:ae:06:c6:2b:b1:c3:13:44:cb:d8:e9:7f:db:
-        9f:fe:bf:76:ba:2b:dc:c2:6a:d6:c9:41:a4:01:ae:66:9a:60:
-        3f:4c:5b:d2:3a:dc:78:97:51:09:0c:4e:09:39:74:5e:27:d2:
-        d1:d1:52:ca:eb:53:f4:8d:7c:5d:f3:e5:7f:5c:09:07:a9:fe:
-        9f:c3:aa:39:8f:af:2d:ad:93:a8:37:f1:33:4e:ee:e6:aa:59:
-        d7:69:04:a3:c9:5b:99:fc:8a:cf:4e:38:54:fa:4f:75:3a:b9:
-        8b:f8:86:6e:23:ae:f7:fe:86:42:08:cf:ee:56:c6:e7:07:e6:
-        cb:26:a2:79
-5b556c29d1f06cc800184d1fea43438725f56014  atomix-shim_production-REL-1-ca.pem
+        23:e3:39:f1:98:41:57:f6:5a:b1:21:4b:b0:d9:88:d5:a4:e8:
+        e8:09:b3:47:a7:24:ad:7a:6e:65:d1:6d:8e:82:40:1e:ec:8b:
+        33:bb:42:b6:24:b3:0a:d1:0c:a3:22:43:1d:27:64:58:a2:ad:
+        04:20:40:1b:ed:90:c3:f4:6a:8f:36:4e:02:55:5e:0d:16:27:
+        7d:96:3a:84:c0:09:21:c1:54:cd:33:14:4b:22:1b:56:94:61:
+        7c:5b:e0:2d:a7:53:d9:36:b9:ff:4f:eb:6b:d4:42:72:2d:17:
+        11:5f:fc:29:e3:63:87:24:49:80:43:c0:bf:75:16:3c:c5:a5:
+        b6:5a:50:ac:21:a3:83:b1:48:6b:d3:16:c5:43:8c:8d:6e:b3:
+        48:58:88:ec:16:2c:93:0c:39:ce:8e:20:41:8f:1d:f5:e9:78:
+        99:37:85:58:a7:01:b0:db:68:49:5d:af:f5:db:84:54:e8:9b:
+        59:47:38:b7:89:ef:1b:35:05:93:0b:49:9b:24:f2:f5:e7:ce:
+        fc:0a:80:f3:bb:c7:39:e5:a1:5a:46:8f:49:92:3c:e2:5b:1a:
+        fe:86:61:ac:49:74:4c:de:96:3a:dd:f8:2d:24:7b:87:9f:fd:
+        cb:be:de:59:89:0b:59:1d:90:c7:d7:37:b4:76:7a:ed:e7:89:
+        c8:9e:fd:da
+c12c156440feb7da475b39ee8a1f29ac7e1e83a9  atomix-shim_production-REL-1.pem
 Certificate:
     Data:
         Version: 3 (0x2)
         Serial Number:
-            9f:52:84:58:78:b9:2d:d8
+            47:1a:9c:05:e0:f8:f3:49:92:ff:ae:62:7e:9f:45:e7:1b:37:1b:54
         Signature Algorithm: sha256WithRSAEncryption
-        Issuer: O = Cisco, OU = ACI, OU = REL, CN = Puzzle UEFI shim Production
+        Issuer: O = Cisco, OU = PuzzleOS, OU = REL, CN = PuzzleOS UEFI shim Production
         Validity
-            Not Before: Jun  3 21:04:38 2021 GMT
-            Not After : May 22 21:04:38 2071 GMT
-        Subject: O = Cisco, OU = ACI, OU = REL, CN = Puzzle UEFI shim Production
+            Not Before: Sep  1 16:18:31 2022 GMT
+            Not After : Aug 26 16:18:31 2047 GMT
+        Subject: O = Cisco, OU = PuzzleOS, OU = REL, CN = PuzzleOS UEFI shim Production
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 Public-Key: (2048 bit)
@@ -569,37 +566,41 @@ Certificate:
                 15:A4:A1:35:BD:BC:32:7E:C6:A6:54:40:0D:86:BE:4C:78:4B:52:91
             X509v3 Authority Key Identifier: 
                 15:A4:A1:35:BD:BC:32:7E:C6:A6:54:40:0D:86:BE:4C:78:4B:52:91
+            X509v3 Extended Key Usage: 
+                Code Signing
+            X509v3 Key Usage: 
+                Digital Signature
             X509v3 Basic Constraints: 
-                CA:TRUE
+                CA:FALSE
     Signature Algorithm: sha256WithRSAEncryption
     Signature Value:
-        25:07:ba:05:cc:ad:ce:18:54:28:d3:31:c9:d0:be:8a:6c:67:
-        e1:c6:01:8c:3e:62:2c:10:bd:af:8e:6e:33:b9:b2:53:2c:a9:
-        e5:29:ef:9f:91:c4:e3:43:6c:ac:79:9f:5a:84:81:d5:ae:ae:
-        cf:a6:28:a3:8e:8f:0c:6d:80:17:c4:4e:de:73:88:a7:5a:65:
-        fb:03:19:cb:9c:cb:4a:4d:93:7f:59:d3:2b:dc:72:fb:5c:9c:
-        65:1d:6f:e2:06:2b:0c:df:8e:62:1d:a0:61:0e:33:e4:9d:8e:
-        65:fd:e4:cd:b9:a9:c2:47:bd:05:64:ee:bf:ab:31:87:59:5a:
-        2f:2b:16:5e:99:f9:53:f1:52:d9:a5:6f:38:1d:5e:3a:e4:c7:
-        3e:5a:4e:e2:13:d9:6f:0d:9d:56:a7:92:15:92:d2:13:cd:56:
-        3e:87:24:93:0f:89:b7:de:49:0e:b8:be:6a:12:1c:44:ae:5a:
-        d0:30:82:07:ab:3b:a4:a1:bc:25:88:05:9a:9c:2d:80:e8:6a:
-        ae:80:be:6b:87:44:75:53:9a:f6:34:6e:32:76:f4:ca:48:3e:
-        b7:9f:09:53:e3:b5:09:9c:e6:99:a9:c9:1a:63:fd:f9:88:ab:
-        3c:5f:05:cc:b0:8d:88:d4:a9:8e:80:ce:b8:6c:35:74:56:2b:
-        b9:b7:11:31
-ecb6f497c6dbdbbf46ff531f522fa49305ca78f7  atomix-shim_tpm-REL-1-ca.pem
+        9a:f9:5f:8f:2a:df:33:42:69:f5:ee:0e:7a:18:5a:f3:e3:4e:
+        65:51:e2:67:49:65:57:41:14:8a:8f:8a:fb:df:9d:16:7c:d7:
+        c1:91:11:f1:2b:4f:3d:c7:86:65:92:8a:3a:47:5f:04:e8:fc:
+        79:c5:3c:5c:1e:47:92:3d:7b:3e:97:e0:bf:bf:23:c3:3b:cc:
+        46:f1:d3:57:60:55:f9:12:0b:5e:23:b7:6d:5c:d9:5b:d2:c3:
+        e0:a7:87:5e:a5:17:e9:95:bf:e2:63:9c:4d:1d:f2:0b:ca:c7:
+        cf:66:f7:73:8a:ba:99:00:fb:5d:1e:bc:e7:b2:99:80:c0:80:
+        62:5d:6a:8b:b6:89:3d:a7:bb:aa:ab:b6:9e:2d:3b:d0:ca:50:
+        46:ee:27:d4:af:2b:ba:ea:26:4b:72:e0:54:57:2a:8d:68:d8:
+        46:3d:96:54:68:ea:ca:88:2a:c5:a0:a1:08:98:61:52:f5:ad:
+        ba:f3:43:0d:29:95:30:e2:8c:34:f2:cb:35:3c:ac:1f:31:57:
+        5a:91:1a:b1:9c:b2:c5:07:0d:ac:17:fe:45:10:1e:95:6a:e6:
+        f9:34:9c:22:63:f2:fd:7c:ba:8c:d2:7b:44:ab:a8:72:ac:be:
+        6a:be:3b:2b:08:d0:b7:30:1c:6a:85:bd:04:45:90:84:19:63:
+        bb:66:20:a6
+98432555230f752402cd40e4a126bd53c9d8678f  atomix-shim_tpm-REL-1.pem
 Certificate:
     Data:
         Version: 3 (0x2)
         Serial Number:
-            b1:09:43:85:35:6c:d7:1b
+            59:e6:d7:b4:7a:75:43:c9:58:d3:86:30:f9:b9:b3:50:ed:87:a0:ab
         Signature Algorithm: sha256WithRSAEncryption
-        Issuer: O = Cisco, OU = ACI, OU = REL, CN = Puzzle UEFI shim TPM Management
+        Issuer: O = Cisco, OU = PuzzleOS, OU = REL, CN = PuzzleOS UEFI shim TPM Management
         Validity
-            Not Before: Jun  3 21:05:34 2021 GMT
-            Not After : May 22 21:05:34 2071 GMT
-        Subject: O = Cisco, OU = ACI, OU = REL, CN = Puzzle UEFI shim TPM Management
+            Not Before: Sep  1 16:50:21 2022 GMT
+            Not After : Aug 26 16:50:21 2047 GMT
+        Subject: O = Cisco, OU = PuzzleOS, OU = REL, CN = PuzzleOS UEFI shim TPM Management
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 Public-Key: (2048 bit)
@@ -628,40 +629,44 @@ Certificate:
                 58:65:1B:4F:69:41:96:9E:0E:FB:26:84:11:9B:E9:3E:F2:B8:F4:39
             X509v3 Authority Key Identifier: 
                 58:65:1B:4F:69:41:96:9E:0E:FB:26:84:11:9B:E9:3E:F2:B8:F4:39
+            X509v3 Extended Key Usage: 
+                Code Signing
+            X509v3 Key Usage: 
+                Digital Signature
             X509v3 Basic Constraints: 
-                CA:TRUE
+                CA:FALSE
     Signature Algorithm: sha256WithRSAEncryption
     Signature Value:
-        1d:3c:ac:56:cb:f0:e1:71:54:d8:d1:7e:fb:80:6b:e0:32:53:
-        1a:a6:fe:b1:41:40:a3:65:50:00:71:b7:46:4f:fb:c4:14:05:
-        c8:31:24:3d:90:4c:fc:8b:10:88:38:17:2c:60:d8:0b:5f:49:
-        2a:de:4a:23:14:85:12:88:0d:4b:29:95:74:b8:1f:14:cc:76:
-        11:f0:42:cb:d2:6c:86:a9:d8:6c:76:b8:7d:19:eb:8d:57:48:
-        b1:c5:7a:04:31:9e:60:54:dd:14:20:fc:49:18:f0:29:73:a8:
-        ae:e5:d6:62:b3:c8:ae:86:b9:e8:a5:a8:7c:c1:92:ec:0f:38:
-        2d:b6:7e:df:5a:e0:08:b1:1d:c5:fe:f1:ea:7b:7c:05:e7:e3:
-        39:6c:22:94:0b:72:ce:96:c4:41:dd:97:6e:35:4a:6a:83:06:
-        96:fc:f2:bb:bc:b2:a1:64:a1:cc:9c:b9:98:4b:a1:af:30:c1:
-        2d:01:64:c9:46:91:7e:61:50:8a:aa:a1:f7:83:06:7a:14:01:
-        7d:65:13:3c:f5:ae:da:e6:aa:8f:71:1c:74:77:c4:6d:13:81:
-        38:1a:8b:ff:f4:2f:70:33:c1:4b:63:15:f7:db:f5:57:11:a6:
-        a1:cf:13:f2:9b:ae:cb:f5:21:52:ed:cd:8f:e1:4f:08:09:33:
-        ef:42:b4:3f
--rw-r--r-- 1 root root 2813 Jul  6 17:30 /shim-15.6/vendor_db.esl
--rw-r--r-- 1 root root  931 Jul  6 17:30 atomix-shim_limited-REL-1-ca.esl
--rw-r--r-- 1 root root  937 Jul  6 17:30 atomix-shim_production-REL-1-ca.esl
--rw-r--r-- 1 root root  945 Jul  6 17:30 atomix-shim_tpm-REL-1-ca.esl
-Removing intermediate container 2f0b8d7c5364
- ---> b3f094a6cfda
+        90:5c:2d:10:9f:b8:00:e9:2a:68:fd:71:3a:2e:42:f3:76:22:
+        be:19:62:4c:6c:35:fe:19:74:31:6e:d2:f1:2f:09:dd:16:6a:
+        a9:38:25:89:32:e4:19:0c:9f:8c:10:29:ca:6a:ae:53:61:fd:
+        cd:af:cd:d6:66:87:0b:cc:e6:ab:93:ca:07:fa:36:6d:15:06:
+        81:b3:bc:4c:26:71:50:94:52:f6:52:94:34:2f:28:b4:bd:4b:
+        8e:38:17:9d:b9:e3:34:82:a8:de:3e:d6:e3:40:67:46:01:4a:
+        a8:a8:ba:ca:02:75:b4:ef:86:0a:c9:e8:dc:da:19:db:77:84:
+        4d:cf:8d:3f:96:fb:26:65:63:a2:23:ac:8c:b2:e6:f3:82:85:
+        3f:a6:d9:e3:77:d4:eb:7e:80:ae:05:da:79:ee:47:cc:28:91:
+        f5:e6:95:c7:2c:f2:aa:79:d7:72:31:7b:0f:3a:6f:c9:31:06:
+        70:f0:af:da:d2:63:f7:e2:9f:13:47:46:a0:ad:25:19:7a:3f:
+        25:3b:89:dd:c4:8f:be:4c:eb:e1:48:14:7e:01:3c:1d:0a:59:
+        ee:5f:d9:9a:24:60:33:7e:7c:29:a1:07:50:7d:a9:77:a3:75:
+        3b:23:e3:1f:de:64:1a:15:b7:21:33:6b:4e:09:01:53:9a:73:
+        97:5c:fd:44
+-rw-r--r-- 1 root root 2975 Sep  1 19:25 /shim-15.6/vendor_db.esl
+-rw-r--r-- 1 root root  985 Sep  1 19:25 atomix-shim_limited-REL-1.esl
+-rw-r--r-- 1 root root  991 Sep  1 19:25 atomix-shim_production-REL-1.esl
+-rw-r--r-- 1 root root  999 Sep  1 19:25 atomix-shim_tpm-REL-1.esl
+Removing intermediate container 6f0482c5e914
+ ---> 1ffe45fa856e
 Step 8/10 : RUN cd shim-15.6; cat sbat.csv >> data/sbat.csv && cat data/sbat.csv
- ---> Running in 8c54a452deeb
+ ---> Running in 587ef8a95678
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,2,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.puzzleos,1,PuzzleOS,shim,15.6-202207-1,https://github.com/puzzleos
-Removing intermediate container 8c54a452deeb
- ---> 170fbeb51397
+Removing intermediate container 587ef8a95678
+ ---> d889acf9728b
 Step 9/10 : RUN cd shim-15.6; make
- ---> Running in 8b099d6fe910
+ ---> Running in 84910e52f91b
 sed	-e "s,@@VERSION@@,15.6," \
 	-e "s,@@UNAME@@,Linux x86_64 x86_64 x86_64 GNU/Linux," \
 	-e "s,@@COMMIT@@,505cdb678b319fcf9a7fdee77c0f091b4147cbe5," \
@@ -1281,14 +1286,14 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .vendor_cert -j .sbat \
 	--target efi-app-x86_64 fbx64.so fbx64.efi
 ./post-process-pe -vv fbx64.efi
-Removing intermediate container 8b099d6fe910
- ---> 83a900cbe403
+Removing intermediate container 84910e52f91b
+ ---> d6a34d840913
 Step 10/10 : RUN cd shim-15.6; sha256sum *.efi
- ---> Running in 289e94fbf0b5
+ ---> Running in 8bff281df7b3
 9c31b80218e3bf15fb955d6053ec6282a7d6cbec280f149ffd0022f5820997f7  fbx64.efi
 99580a1356b32302c256ac48dc03a7837a0585edf4452866b47600de987c31e7  mmx64.efi
-938ecd12359171bcb63e5974ed2dfff719cc8af1abe27cd12849c04060aeb721  shimx64.efi
-Removing intermediate container 289e94fbf0b5
- ---> 2922d95924a4
-Successfully built 2922d95924a4
+c44d3bff9c43a24b443a8ba48cf8963441291b48e44c6e427d628e8a05a64e46  shimx64.efi
+Removing intermediate container 8bff281df7b3
+ ---> 579e58ca9611
+Successfully built 579e58ca9611
 Successfully tagged shim:latest

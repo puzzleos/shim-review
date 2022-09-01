@@ -152,8 +152,9 @@ Our shim consists of three vendor certificates:
 - a "management" certificate
 - a "limited" certificate
 
-The PEM formatted certificates are available in the "config/certs" directory.
-No hashes are present in the shim's allow-list.
+The PEM formatted, self-signed certificates (CA bit is set to False) are
+available in the "config/certs" directory. No hashes are present in
+the shim's allow-list.
 
 The different vendor certificates, and the associated signed boot chain, are
 used in conjunction with the TPM's PCR7 and TPM Extended Authorization policies
@@ -206,7 +207,7 @@ This is our first shim review submission for PuzzleOS.
 ### What is the SHA256 hash of your final SHIM binary?
 -------------------------------------------------------------------------------
 [your text here]
-938ecd12359171bcb63e5974ed2dfff719cc8af1abe27cd12849c04060aeb721  shimx64.efi
+c44d3bff9c43a24b443a8ba48cf8963441291b48e44c6e427d628e8a05a64e46  shimx64.efi
 
 -------------------------------------------------------------------------------
 ### How do you manage and protect the keys used in your SHIM?
